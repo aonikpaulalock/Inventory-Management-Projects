@@ -1,0 +1,52 @@
+.about-page {
+  margin: 8rem 0 3rem 0;
+}
+
+.about-main-title {
+  font-family: "Dela Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 6rem;
+  text-align: center;
+  color: var(--text-primary-color);
+  letter-spacing: .2rem;
+}
+
+.about-sub-title {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--subText-primary-color);
+}
+
+.svg-icons {
+  width: 120px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(243, 255, 255);
+}
+.svg-icons svg {
+ transform: translate(82%,78%);
+}
+.title-about {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 4.5rem;
+  color: var(--text-primary-color);
+  margin-bottom: 0;
+}
+.text-about {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 ;
+  font-size: 1.6rem ;
+  line-height: 3.2rem;
+  color:  var(--subText-primary-color) 
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: all .7s linear;
+}

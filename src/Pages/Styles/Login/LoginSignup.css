@@ -1,0 +1,99 @@
+.form-container {
+  padding: 2.6rem 0 3.6rem 3.6rem;
+}
+
+.signup-heading {
+  font-family: 'Inter'  !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5.5rem;
+  color: var(--text-primary-color);
+  margin-bottom: 2.6rem;
+}
+
+.input-name {
+  width: 95%;
+}
+
+.input {
+  font-family: 'Inter'  !important;
+  border-radius: 0 !important;
+  background: #F7F8FA !important;
+  border: .1rem solid #D9D9DB !important;
+  padding: 1.7rem 2rem !important;
+  font-family: 'IBM Plex Sans' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 2rem !important;
+  line-height: 2.8rem !important;
+  color: #8A8A8A !important;
+  margin-bottom: 1.3rem !important;
+}
+
+.Signup-Button {
+  font-family: 'Inter' ;
+  width: 95%;
+  margin: 1.9rem 0 2.4rem 0;
+  font-family: 'IBM Plex Sans' !important;
+  font-style: normal;
+  border: 0;
+  outline: 0;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 1.2rem;
+  background: var(--other-primary-color);
+  border-radius: 2.5rem;
+ 
+}
+
+.image-content {
+  margin-top: 4rem;
+  padding-right: 3.6rem;
+}
+
+.Privacy-policy {
+  font-family: 'Inter'  !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: right;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.heading-acount {
+  font-family: 'Inter'  !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.6rem;
+  text-align: right;
+  color:var(--subText-primary-color);
+  margin: 2rem 0 0 0 ;
+}
+
+.acount-heading span {
+  color: var(--other-primary-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.forget-password {
+  font-family: 'Inter'  !important;;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  text-align: center;
+  letter-spacing: -0.008rem;
+  color: var(--subText-primary-color);
+  margin-top: 2.3rem;
+  cursor: pointer;
+}
+.toggle-form {
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+.Provider {
+  width: 95%;
+  background: #FFFFFF;
+  border: .6px solid #D9D9DB;
+  border-radius: .2rem;
+  padding: 1.1rem 0;
+  font-family: 'Inter'  !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: var(--text-primary-color);
+
+}
