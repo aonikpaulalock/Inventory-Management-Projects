@@ -1,0 +1,40 @@
+.app-heading {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 7rem;
+  color: var(--text-primary-color);
+}
+
+.app-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  color: var(--subText-primary-color) ;
+  padding:2.4rem 0rem;
+}
+.input-feild {
+  width: 70%;
+  padding:2.5rem 2.5rem ;
+  border: .1rem solid var(--subText-primary-color);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: none;
+}
+.input-feild:focus {
+  outline: none;
+}
+.link-button{
+  background-color:var(--other-primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-weight: 500;
+  border-radius: .2rem;
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+}

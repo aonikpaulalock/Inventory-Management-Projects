@@ -1,8 +1,12 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../Firebase.init';
 import "../Styles/Home/Header.css"
 const Header = () => {
+  const [user] = useAuthState(auth)
   return (
     <Navbar expand="lg" className="nav-bg">
       <Container>
@@ -21,12 +25,21 @@ const Header = () => {
             <Nav.Link as={Link} to="/reviews" className="anchor-item">Reviews</Nav.Link>
           </Nav>
           <div className="d-lg-flex justify-lg-content-around align-lg-items-center">
-            <Nav.Link as={Link} to="/signin">
-              <button className="authentication-button mb-4 mb-lg-0">Login</button>
-            </Nav.Link>
-            <Nav.Link as={Link} to="/signup">
-              <button className="authentication-button">Signup</button>
-            </Nav.Link>
+            {
+              !user ?
+                <>
+                  <Nav.Link as={Link} to="/signin">
+                    <button className="authentication-button mb-4 mb-lg-0">Login</button>
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/signup">
+                    <button className="authentication-button">Signup</button>
+                  </Nav.Link>
+                </>
+                :
+                <Nav.Link as={Link} to="#">
+                <button className="authentication-button"  onClick={() => signOut(auth)}>Logout</button>
+              </Nav.Link>  
+}
           </div>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,12 @@
+.loading-Container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-spnnier {
+  color: var(--other-primary-color) !important ;
+  height:20rem !important;
+  width: 20rem !important;
+}

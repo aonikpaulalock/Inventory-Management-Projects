@@ -1,0 +1,31 @@
+.card-design {
+ width: 50%;
+ margin: 0 auto;
+ border: 0 !important;
+}
+/* .carousel-indicators {
+ background-color: white !important;
+} */
+.card-image{
+  padding-top: 2.5rem;
+  width: 80px !important;
+  margin: 0 auto;
+}
+.reviewer-name {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  color: var(--text-primary-color);
+}
+.review {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 ;
+  font-size: 1.5rem ;
+  line-height: 1.8rem;
+  color:  var(--subText-primary-color) !important; 
+}
+.carousel-indicators {
+  display: none !important;
+}

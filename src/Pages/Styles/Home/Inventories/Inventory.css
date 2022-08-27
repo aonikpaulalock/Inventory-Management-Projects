@@ -1,0 +1,32 @@
+.inventory-name{
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 4rem;
+  color: var(--text-primary-color);
+}
+.inventory-des {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 ;
+  font-size: 1.5rem ;
+  line-height: 2.4rem;
+  color:  var(--subText-primary-color) 
+}
+.inventory-price {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--text-primary-color);
+}
+.update-button {
+  background-color:var(--other-primary-color);
+  color: white;
+  border: .1rem solid var(--other-primary-color);
+  padding: 1rem 3rem;
+  font-weight: 500;
+  border-radius: .2rem;
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+}

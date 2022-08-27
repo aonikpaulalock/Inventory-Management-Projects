@@ -2,7 +2,7 @@
   margin: 8rem 0 3rem 0;
 }
 
-.about-main-title {
+.share-main-title {
   font-family: "Dela Gothic One";
   font-style: normal;
   font-weight: 400;
@@ -13,7 +13,7 @@
   letter-spacing: .2rem;
 }
 
-.about-sub-title {
+.share-sub-title {
   font-family: "Inter";
   font-weight: 400;
   font-size: 1.5rem;
@@ -46,7 +46,7 @@
   line-height: 3.2rem;
   color:  var(--subText-primary-color) 
 }
-.card:hover {
+.hover-card:hover {
   transform: scale(1.1);
   transition: all .7s linear;
 }
