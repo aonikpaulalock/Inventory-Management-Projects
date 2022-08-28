@@ -21,13 +21,13 @@ const Header = () => {
           <Nav className="mx-auto">
             <Nav.Link as={Link} to="/" className="anchor-item">Home</Nav.Link>
             <Nav.Link as={Link} to="/about" className="anchor-item">About</Nav.Link>
-            <Nav.Link as={Link} to="/services" className="anchor-item">Services</Nav.Link>
-            <Nav.Link as={Link} to="/reviews" className="anchor-item">Reviews</Nav.Link>
+            <Nav.Link as={Link} to="/blogs" className="anchor-item">Blogs</Nav.Link>
             {
               user &&
               <>
                 <Nav.Link as={Link} to="/manageInventory" className="anchor-item">Manage</Nav.Link>
                 <Nav.Link as={Link} to="/addInventory" className="anchor-item">Add</Nav.Link>
+                <Nav.Link as={Link} to="/myItems" className="anchor-item">My-Items</Nav.Link>
               </>
             }
           </Nav>

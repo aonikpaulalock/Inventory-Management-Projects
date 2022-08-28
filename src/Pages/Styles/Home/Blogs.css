@@ -1,0 +1,30 @@
+.blogs-content h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 6rem;
+  color: var(--text-primary-color);
+  text-align: center;
+  padding: 2.5rem 0 1rem 0;
+}
+
+.blogs-dateCity {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  color: var(--text-primary-color);
+  text-align: center;
+}
+
+.blogs-content p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: var(--subText-primary-color);
+  padding: 1.3rem 0;
+}

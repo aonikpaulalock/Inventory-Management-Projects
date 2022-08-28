@@ -12,7 +12,10 @@ import Login from './Pages/Home/Login/Login';
 import Signup from './Pages/Home/Login/Signup';
 import Footer from './Pages/Shared/Footer';
 import Header from './Pages/Shared/Header';
-import ProtectedRoute from './Pages/Shared/ProtectedRoute';;
+import ProtectedRoute from './Pages/Shared/ProtectedRoute'; import Blogs from './Pages/Home/Blogs';
+import NotFound from './Pages/Shared/NotFound';
+import MyItems from './Pages/BeUser/MyItems';
+;
 function App() {
   return (
     <>
@@ -26,13 +29,28 @@ function App() {
             <InventoryDetails />
           </ProtectedRoute>
         }></Route>
-        <Route path="/manageInventory" element={<ManageInventory/>}></Route>
-        <Route path="/addInventory" element={<AddItems/>}></Route>
+        <Route path="/manageInventory" element={
+          <ProtectedRoute>
+            <ManageInventory />
+          </ProtectedRoute>
+        }></Route>
+        <Route path="/addInventory" element={
+          <ProtectedRoute>
+            <AddItems />
+          </ProtectedRoute>
+        }></Route>
+        <Route path="/myItems" element={
+          <ProtectedRoute>
+            <MyItems />
+          </ProtectedRoute>
+        }></Route>
+        <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signin" element={<Login />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 }

@@ -1,0 +1,29 @@
+.notFound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  place-items: center;
+}
+.not-found-page h1 {
+  font-family: 'Dela Gothic One', cursive;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 5.8rem;
+  letter-spacing: .4rem;
+  color: var(--text-primary-color);
+}
+.not-found-page p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: var(--subText-primary-color);
+  padding: 1.5rem 0 ;
+}
+.error {
+  color: rgb(248, 82, 82);
+  font-size: 5rem;
+}
