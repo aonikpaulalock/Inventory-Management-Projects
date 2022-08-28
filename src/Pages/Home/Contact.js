@@ -12,17 +12,29 @@ const Contact = () => {
         <div className="col-md-6 pt-5">
           <div className="form-container mt-5 pt-5">
             <Form.Group className="input-name">
-              <Form.Control type="text" name="text" placeholder="Enter Your Name"
-                className="input"
+              <input class="input-feild shadow input-feild-3"
+                type="text"
+                name="Enter Your Name"
+                placeholder="Enter Your Name"
                 required
+              />
+            </Form.Group>
+            <Form.Group className="input-name">
+              <input class="input-feild shadow input-feild-3"
+                type="email"
+                name="email"
+                placeholder="Enter Your Email"
                 autoComplete='off'
               />
             </Form.Group>
             <Form.Group className="input-name">
-              <Form.Control type="email" name="email" placeholder="Enter Your Password" className="input" required />
-            </Form.Group>
-            <Form.Group className="input-name">
-              <Form.Control as="textarea"  className="fs-3 fw-semibold" rows="6" name="message" placeholder="Enter Your Message" />
+              <textarea
+                type="text"
+                rows="6"
+                name="description"
+                placeholder="Enter Your Message"
+                className="input-feild shadow input-feild-3"
+                required />
             </Form.Group>
             <button type="submit" className="Signup-Button">Send Message</button>
           </div>

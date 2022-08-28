@@ -1,5 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+import AddItems from './Pages/BeUser/AddItems';
+import ManageInventory from './Pages/BeUser/ManageInventorys';
 import About from './Pages/Home/About';
 import Home from './Pages/Home/Home';
 import Inventorys from './Pages/Home/Inventory/Inventorys';
@@ -8,8 +12,7 @@ import Login from './Pages/Home/Login/Login';
 import Signup from './Pages/Home/Login/Signup';
 import Footer from './Pages/Shared/Footer';
 import Header from './Pages/Shared/Header';
-import ProtectedRoute from './Pages/Shared/ProtectedRoute';
-
+import ProtectedRoute from './Pages/Shared/ProtectedRoute';;
 function App() {
   return (
     <>
@@ -23,10 +26,13 @@ function App() {
             <InventoryDetails />
           </ProtectedRoute>
         }></Route>
+        <Route path="/manageInventory" element={<ManageInventory/>}></Route>
+        <Route path="/addInventory" element={<AddItems/>}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signin" element={<Login />}></Route>
       </Routes>
       <Footer />
+      <ToastContainer/>
     </>
   );
 }

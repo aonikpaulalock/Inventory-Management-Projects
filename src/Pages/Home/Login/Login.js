@@ -7,9 +7,10 @@ import auth from '../../../Firebase.init';
 import SocialLogin from './SocialLogin';
 import "../../Styles/Login/LoginSignup.css"
 import image from "../../Asset/Login/login.png"
+import Loading from '../../Shared/Loading';
 const Login = () => {
   // Hooks
-    const navigate = useNavigate()
+  const navigate = useNavigate()
   const location = useLocation()
   const [email, setEmail] = useState('')
   const [loginError, setloginError] = useState('')
@@ -22,11 +23,6 @@ const Login = () => {
   ] = useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
-
-  // if (loading) {
-  //   return <Loading />
-  // }
-
   // Login Function
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
@@ -40,10 +36,12 @@ const Login = () => {
     }
     event.target.reset()
   }
+  if (loading) {
+    return <Loading />
+  }
 
   if (user) {
     navigate(from, { replace: true })
-    console.log(user);
   }
 
   const handleEmail = (e) => {
@@ -73,7 +71,7 @@ const Login = () => {
             </Form.Group>
             <h6 className='text-center text-danger mt-3 mb-0 fs-5'>{loginError}</h6>
             <button type="submit" className="Signup-Button">Sign In</button>
-           <SocialLogin/>
+            <SocialLogin />
             <h6 className="forget-password" onClick={handlePasswordReset}>Forgot Password?</h6>
             <h5 className="text-center text-danger mt-3 mb-0 fs-5">{error?.message}</h5>
           </Form>

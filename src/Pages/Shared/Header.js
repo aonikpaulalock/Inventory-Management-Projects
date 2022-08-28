@@ -23,6 +23,13 @@ const Header = () => {
             <Nav.Link as={Link} to="/about" className="anchor-item">About</Nav.Link>
             <Nav.Link as={Link} to="/services" className="anchor-item">Services</Nav.Link>
             <Nav.Link as={Link} to="/reviews" className="anchor-item">Reviews</Nav.Link>
+            {
+              user &&
+              <>
+                <Nav.Link as={Link} to="/manageInventory" className="anchor-item">Manage</Nav.Link>
+                <Nav.Link as={Link} to="/addInventory" className="anchor-item">Add</Nav.Link>
+              </>
+            }
           </Nav>
           <div className="d-lg-flex justify-lg-content-around align-lg-items-center">
             {
@@ -37,9 +44,9 @@ const Header = () => {
                 </>
                 :
                 <Nav.Link as={Link} to="#">
-                <button className="authentication-button"  onClick={() => signOut(auth)}>Logout</button>
-              </Nav.Link>  
-}
+                  <button className="authentication-button" onClick={() => signOut(auth)}>Logout</button>
+                </Nav.Link>
+            }
           </div>
         </Navbar.Collapse>
       </Container>

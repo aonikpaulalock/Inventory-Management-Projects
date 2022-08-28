@@ -2,16 +2,20 @@ import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase.init';
 import SocialLogin from './SocialLogin';
 import "../../Styles/Login/LoginSignup.css"
 import image from "../../Asset/Login/login.png"
+import Loading from '../../Shared/Loading';
 const Signup = () => {
   // Hooks
+  const navigate = useNavigate()
+  const location = useLocation()
   const [error, setError] = useState('')
-  const [updateProfile] = useUpdateProfile(auth);
-  const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+  const [updateProfile, updating] = useUpdateProfile(auth);
+  const from = location?.state?.from?.pathname || '/';
+  const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
 
   // Function
   const handleSubmit = async event => {
@@ -37,8 +41,12 @@ const Signup = () => {
     event.target.reset()
   }
 
+  if (loading || updating) {
+    return <Loading />
+  }
+
   if (user) {
-    console.log(user);
+    navigate(from, { replace: true })
   }
 
   return (
@@ -79,7 +87,7 @@ const Signup = () => {
             </Form.Group>
             <h6 className='text-center text-danger mt-3 mb-0 fs-5'>{error}</h6>
             <button type="submit" className="Signup-Button">Sign up</button>
-            <SocialLogin/>
+            <SocialLogin />
           </Form>
         </div>
         <div className="col-lg-6 d-flex  flex-column justify-content-center align-items-center">

@@ -30,3 +30,18 @@
   font-size: 1.6rem;
   letter-spacing: .1rem;
 }
+.manage-inventory {
+  background-color: transparent;
+  border: 0;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  color: var(--other-primary-color);
+  letter-spacing: .1rem;
+ 
+}
+.manage-inventory:hover .svg-icon {
+  transition: all .6s linear;
+  transform: translateX(40%);
+}

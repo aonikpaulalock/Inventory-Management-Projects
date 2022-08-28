@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import "../../Styles/Home/InventoryDetails/InventoryDetails.css"
 import axios from "axios";
 import { Card, Form } from 'react-bootstrap';
 import auth from '../../../Firebase.init';
 const InventoryDetails = () => {
+  const navigate = useNavigate()
   const [user] = useAuthState(auth)
   const { id } = useParams()
   const [details, setDetails] = useState([]);
   const [reload, setReload] = useState(false)
   const [decrease, setDecrease] = useState(details.quantity)
-  console.log(decrease)
   useEffect(() => {
     fetch(`http://localhost:4000/inventory/${id}`)
       .then(res => res.json())
@@ -47,7 +47,7 @@ const InventoryDetails = () => {
 
   return (
     <div className="container mt-5 mb-5">
-      <div className="">
+      <div>
         <h1 className="share-main-title">Inven<span className="ride">tories</span> Det<span className="ride">ails</span></h1>
         <p className="share-sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis!</p>
       </div>
@@ -71,8 +71,9 @@ const InventoryDetails = () => {
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" /> </svg>
                   {details.quantity}</h6>
               </div>
-              <div className="">
+              <div className="d-flex justify-content-between mt-5">
                 <button className="update-button" onClick={handleDelevered}>Deleverd</button>
+                <button className="update-button" onClick={()=>navigate("/manageInventory")}>Manage</button>
               </div>
             </Card.Body>
           </Card>
@@ -103,9 +104,6 @@ const InventoryDetails = () => {
         </div>
       </div>
     </div>
-
-
-
   );
 };
 

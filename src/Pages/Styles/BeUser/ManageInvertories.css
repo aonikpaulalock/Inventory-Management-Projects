@@ -1,0 +1,47 @@
+.table-heading-back {
+  background-color: var(--text-primary-color);
+  border-left: none !important;
+}
+
+.table-sub-head th {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 3.3rem 2.8rem !important;
+  border-width: 0px 0px !important;
+}
+
+td {
+  padding: 2.5rem !important;
+}
+
+.mange-name {
+  width: 100%;
+  margin: 5rem auto;
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  line-height: 3rem !important;
+  color: var(--text-primary-color) !important;
+}
+
+.mange-details {
+  width: 100%;
+  margin: 5rem auto;
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 1.6rem !important;
+  line-height: 2.6rem !important;
+  padding-bottom: 1rem;
+  color: var(--text-primary-color) !important;
+}
+.svg-icon {
+  margin: 5rem auto;
+  cursor: pointer;
+}
