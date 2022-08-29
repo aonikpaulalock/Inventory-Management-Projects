@@ -15,6 +15,7 @@ import Header from './Pages/Shared/Header';
 import ProtectedRoute from './Pages/Shared/ProtectedRoute'; import Blogs from './Pages/Home/Blogs';
 import NotFound from './Pages/Shared/NotFound';
 import MyItems from './Pages/BeUser/MyItems';
+import BlogDetails from './Pages/Home/BlogDetails';
 ;
 function App() {
   return (
@@ -45,6 +46,11 @@ function App() {
           </ProtectedRoute>
         }></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
+        <Route path="/blogs/:id" element={
+          <ProtectedRoute>
+            <BlogDetails />
+          </ProtectedRoute>
+        }></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signin" element={<Login />}></Route>
         <Route path="*" element={<NotFound />}></Route>

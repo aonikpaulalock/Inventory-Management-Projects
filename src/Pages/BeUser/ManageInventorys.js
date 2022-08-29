@@ -3,8 +3,36 @@ import { Table } from 'react-bootstrap';
 import useInventory from '../Asset/Hooks/useInventory';
 import "../Styles/BeUser/ManageInvertories.css"
 import ManageInventory from './ManageInventory';
+import axios from "axios";
+import Swal from 'sweetalert2';
 const ManageInventorys = () => {
-  const [inventorys,setInventorys] = useInventory()
+  const [inventorys, setInventorys] = useInventory()
+  const handleDelete = async (id) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, Delete'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const url = `http://localhost:4000/inventory/${id}`
+        axios
+          .delete(url)
+          .then(response => {
+            const filterDelete = inventorys.filter(product => product._id !== id)
+            setInventorys(filterDelete)
+          })
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+  }
   return (
     <div className="container mt-5 mb-5">
       <div className="mb-5">
@@ -12,7 +40,7 @@ const ManageInventorys = () => {
         <p className="share-sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis!</p>
       </div>
       <div className="table-responsive">
-        <Table borderless bordered>
+        <Table borderless bordered className="shadow">
           <thead className="table-heading-back">
             <tr className="table-sub-head">
               <th>Image</th>
@@ -28,8 +56,8 @@ const ManageInventorys = () => {
                 <ManageInventory
                   key={inventory._id}
                   inventory={inventory}
-                  setInventorys={setInventorys}
-                  >
+                  handleDelete={() => handleDelete(inventory._id)}
+                >
                 </ManageInventory>)
 
             }
