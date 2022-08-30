@@ -5,11 +5,6 @@ import image2 from "../../Pages/Asset/Banner/by-1.png"
 import image3 from "../../Pages/Asset/Banner/by-3.jpg"
 import "../../Pages/Styles/Home/Banner.css"
 const Banner = () => {
-  // const [index, setIndex] = useState(0);
-
-  // const handleSelect = (selectedIndex, e) => {
-  //   setIndex(selectedIndex);
-  // };
   return (
     <div className="carousel-banner">
       <Carousel variant="dark" fade>

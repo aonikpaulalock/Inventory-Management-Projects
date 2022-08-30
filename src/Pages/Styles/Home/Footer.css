@@ -7,15 +7,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 20px;
+  padding: 10rem 2rem;
 }
 
 .footer-heading {
   font-family: 'Dela Gothic One';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 1rem;
+  line-height: 2.4rem;
   color: #FFFFFF;
   margin-bottom: 0;
 }
@@ -24,8 +24,8 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 17px;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
   color: #BCB8D0 !important;
   margin-right: 31px;
   cursor: pointer;
@@ -33,12 +33,11 @@
 }
 
 .second-back {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)), #2A263F;
+  background:var(--text-primary-color);
 }
 
 .second-foooter-content {
-  padding: 40px 15px;
+  padding: 4rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,8 +47,8 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
   color: #FFFFFF;
   margin-bottom: 0;
 }
@@ -62,9 +61,47 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
   color: #FFFFFF;
   margin-right: 26px;
   cursor: pointer;
+}
+
+/* Media quries */
+@media (max-width:810px) and (min-width:280px) {
+  .frist-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+
+  .footer-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-sub-heading a {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .second-footer-heading {
+    margin-bottom: 1.2rem;
+  }
+
+  .second-footer-sub-heading span {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 1rem;
+  }
+
+  .second-foooter-content {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }

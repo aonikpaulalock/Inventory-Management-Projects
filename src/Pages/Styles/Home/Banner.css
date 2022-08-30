@@ -39,3 +39,49 @@
   line-height: 3.2rem  !important;
   color:  var(--subText-primary-color)  !important;
 }
+
+
+/* Banner Media Query */
+
+@media (max-width:1130px) {
+  html {
+    font-size: 59%;
+  }
+  .carousel-caption {
+    bottom: -8% !important;
+  }
+}
+@media (max-width:830px) {
+  html {
+    font-size: 48%;
+  }
+  .carousel-caption {
+    bottom: -14% !important;
+  }
+}
+@media (max-width:540px) {
+  html {
+    font-size: 40%;
+  }
+  .image-content {
+    width: 60%;
+  }
+  .carousel-caption {
+    bottom: -15% !important;
+  }
+}
+@media (max-width:420px) {
+  .image-content {
+    width: 70%;
+    margin-bottom: 11rem;
+  }
+  .carousel-caption {
+    bottom: -15% !important;
+  }
+}
+@media (max-width:320px) {
+  .image-content {
+    width: 75%;
+    margin-bottom: 15rem;
+  }
+}
