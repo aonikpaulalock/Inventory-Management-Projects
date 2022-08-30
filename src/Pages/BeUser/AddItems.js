@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../Firebase.init';
 import Add from "../Asset/Add-Items/Add.png"
+import "../Styles/BeUser/AddItems.css"
 const AddItems = () => {
   const [user] = useAuthState(auth);
   // Post Data
@@ -37,7 +38,7 @@ const AddItems = () => {
           <img src={Add} alt="" className="img-fluid" />
         </div>
         <div className="col-md-6">
-          <Form className="ms-3" onSubmit={handleAddProduct}>
+          <Form className="from-back ms-3 ms-0" onSubmit={handleAddProduct}>
             <input class="input-feild shadow input-feild-2"
               type="email"
               name="email"

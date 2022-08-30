@@ -5,13 +5,13 @@ const Available = () => {
   return (
     <div className='container mt-5 mb-5'>
       <div className="row">
-        <div className="col-lg-6">
+        <div className="col-lg-6 col-md-12">
           <div className="available-image">
             <img src={app} alt="" className='img-fluid' />
           </div>
         </div>
-        <div className="col-lg-6">
-          <div className="mt-5 available-content">
+        <div className="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+          <div className="mt-md-5 mt-0 available-content">
             <h1 className="app-heading">Rent<span className="ride">Ride</span> App Available in Android & iOS</h1>
             <p className="app-text">The proper business solution for your developing business strategic and corporation</p>
             <form class="d-flex me-3" role="search">

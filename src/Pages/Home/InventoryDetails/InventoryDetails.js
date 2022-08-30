@@ -53,7 +53,7 @@ const InventoryDetails = () => {
       </div>
       <div className="row">
         <div className="col-md-6">
-          <Card className="border-0 p-2">
+          <Card className="border-0 p-2 mb-md-0 mb-5">
             <Card.Img variant="top" src={details.img} className="w-75 mx-auto" />
             <Card.Body>
               <h5 className="details-name">{details.name}</h5>
@@ -78,7 +78,7 @@ const InventoryDetails = () => {
             </Card.Body>
           </Card>
         </div>
-        <div className="col-md-5  offset-md-1 d-flex justify-content-center align-items-center">
+        <div className="col-md-5  offset-md-1  d-flex justify-content-center align-items-center">
           <div className="form-background">
             <Form onSubmit={handleAddQuantity}>
               <input

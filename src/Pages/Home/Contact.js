@@ -9,7 +9,7 @@ const Contact = () => {
         <p className="share-sub-title">The proper business solution for your developing business strategies and corporation</p>
       </div>
       <div className="row">
-        <div className="col-md-6 pt-lg-5 pt-0">
+        <div className="col-md-6 order-2 order-md-1 pt-lg-5 pt-0">
           <div className="form-container mt-5 pt-5">
             <Form.Group className="input-name">
               <input class="input-feild shadow input-feild-3"
@@ -39,7 +39,7 @@ const Contact = () => {
             <button type="submit" className="Signup-Button">Send Message</button>
           </div>
         </div>
-        <div className="col-md-6  d-flex align-items-center justify-content-center">
+        <div className="col-md-6 order-1 order-md-2 d-flex align-items-center justify-content-center">
           <img src={contact} alt="" className="img-fluid" />
         </div>
       </div>

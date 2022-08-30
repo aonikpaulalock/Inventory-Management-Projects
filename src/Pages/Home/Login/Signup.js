@@ -52,7 +52,7 @@ const Signup = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-lg-6">
+        <div className="col-md-6 order-2 order-md-1">
           <Form className="form-container" onSubmit={handleSubmit}>
             <h2 className="signup-heading">Create Account</h2>
             <Form.Group className="input-name">
@@ -90,7 +90,7 @@ const Signup = () => {
             <SocialLogin />
           </Form>
         </div>
-        <div className="col-lg-6 d-flex  flex-column justify-content-center align-items-center">
+        <div className="col-md-6 order-1 order-md-2 d-flex  flex-column justify-content-center align-items-center">
           <h5 className="heading-acount">Create Have An Account ?
             <Link to="/signin" className="toggle-form"> Signup</Link>
           </h5>

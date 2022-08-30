@@ -31,13 +31,15 @@
   cursor: pointer;
   text-decoration: none;
 }
-
+.footer-hr {
+  border: 1px solid rgb(255, 255, 255);
+}
 .second-back {
   background:var(--text-primary-color);
 }
 
 .second-foooter-content {
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +71,7 @@
 }
 
 /* Media quries */
-@media (max-width:810px) and (min-width:280px) {
+@media (max-width:810px) and (min-width:250px) {
   .frist-content {
     display: flex;
     flex-direction: column;

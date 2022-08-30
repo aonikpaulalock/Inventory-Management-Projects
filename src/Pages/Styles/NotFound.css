@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100%;
   place-items: center;
+  padding: 10rem 0;
 }
 .not-found-page h1 {
   font-family: 'Dela Gothic One', cursive;
@@ -26,4 +27,18 @@
 .error {
   color: rgb(248, 82, 82);
   font-size: 5rem;
+}
+
+@media (max-width:990px) {
+  .notFound-container {
+    padding: 6rem 0;
+  }
+}
+@media (max-width:800px) {
+  html {
+    font-size: 48%;
+  }
+  .not-found-page{
+    padding: .5rem 1.5rem;
+  }
 }
