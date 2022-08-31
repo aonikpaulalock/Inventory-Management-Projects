@@ -73,7 +73,7 @@
 @media (max-width:420px) {
   .image-content {
     width: 70%;
-    margin-bottom: 11rem;
+    margin-bottom: 15rem;
   }
   .carousel-caption {
     bottom: -15% !important;

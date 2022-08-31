@@ -1,0 +1,23 @@
+.service-name {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 3.8rem;
+  color: var(--text-primary-color);
+  margin-bottom: 0;
+}
+
+.service-des {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--subText-primary-color);
+  padding:.5rem 0;
+}
+.hover-service-card:hover {
+  cursor: pointer;
+  transition: all .8s linear;
+  transform: scale(.95);
+}

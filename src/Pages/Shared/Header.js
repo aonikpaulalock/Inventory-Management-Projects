@@ -20,7 +20,6 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link as={Link} to="/" className="anchor-item">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about" className="anchor-item">About</Nav.Link>
             <Nav.Link as={Link} to="/blogs" className="anchor-item">Blogs</Nav.Link>
             {
               user &&
