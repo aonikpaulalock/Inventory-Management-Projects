@@ -21,7 +21,7 @@ const AddItems = () => {
     const addUser = { name, description, quantity, price, img, email }
 
     // Post Data
-    await axios.post("http://localhost:4000/inventorys", addUser)
+    await axios.post("https://inventory-management-project-server-aonikpaulalock.vercel.app/inventorys", addUser)
       .then(response => {
         toast.success("Your Product Aded Successfully")
         event.target.reset()

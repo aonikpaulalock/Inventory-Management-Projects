@@ -5,7 +5,7 @@ function useInventory() {
   const [inventorys, setInventorys] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:4000/inventorys")
+    fetch("https://inventory-management-project-server-aonikpaulalock.vercel.app/inventorys")
       .then(res => res.json())
       .then(data => {
         setInventorys(data)
