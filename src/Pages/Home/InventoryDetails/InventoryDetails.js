@@ -13,7 +13,7 @@ const InventoryDetails = () => {
   const [reload, setReload] = useState(false)
   const [decrease, setDecrease] = useState(details.quantity)
   useEffect(() => {
-    fetch(`https://inventory-management-project-server-aonikpaulalock.vercel.app/inventory/${id}`)
+    fetch(`http://localhost:4000/inventory/${id}`)
       .then(res => res.json())
       .then(data => {
         setDetails(data)
@@ -24,7 +24,7 @@ const InventoryDetails = () => {
   const handleDelevered = () => {
     const quantity = decrease - 1;
     axios.put(
-      `https://inventory-management-project-server-aonikpaulalock.vercel.app/inventory/${id}`, {
+      `http://localhost:4000/inventory/${id}`, {
       quantity
     })
       .then(response => {
@@ -37,7 +37,7 @@ const InventoryDetails = () => {
     const newQuantity = event.target?.number?.value;
     console.log(newQuantity)
     const quantity = parseInt(newQuantity) + parseInt(details?.quantity)
-    await axios.put(`https://inventory-management-project-server-aonikpaulalock.vercel.app/inventory/${id}`, {
+    await axios.put(`http://localhost:4000/inventory/${id}`, {
       quantity,
     })
       .then(response => {

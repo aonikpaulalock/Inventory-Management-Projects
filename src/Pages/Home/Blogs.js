@@ -5,7 +5,7 @@ const Blogs = () => {
   const navigate = useNavigate()
   const [blogs, setBlogs] = useState([])
   useEffect(() => {
-    fetch("https://inventory-management-project-server-aonikpaulalock.vercel.app/blogs")
+    fetch("http://localhost:4000/blogs")
       .then(res => res.json())
       .then(data => setBlogs(data))
   }, [])
