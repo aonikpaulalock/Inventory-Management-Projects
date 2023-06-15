@@ -11,7 +11,7 @@ const MyItems = () => {
   const [user] = useAuthState(auth)
   useEffect(() => {
     const email = user.email;
-    const url = `http://localhost:4000/inventory?email=${email}`
+    const url = `https://inventory-update-server.vercel.app/inventory?email=${email}`
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -32,7 +32,7 @@ const MyItems = () => {
       confirmButtonText: 'Yes, Delete'
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `http://localhost:4000/inventory/${id}`
+        const url = `https://inventory-update-server.vercel.app/inventory/${id}`
         axios
           .delete(url)
           .then(response => {

@@ -18,7 +18,7 @@ const ManageInventorys = () => {
       confirmButtonText: 'Yes, Delete'
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `http://localhost:4000/inventory/${id}`
+        const url = `https://inventory-update-server.vercel.app/inventory/${id}`
         axios
           .delete(url)
           .then(response => {

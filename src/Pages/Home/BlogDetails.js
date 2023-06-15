@@ -5,7 +5,7 @@ const BlogDetails = () => {
   const { id } = useParams()
   const [blogDetails, setBlogsDetails] = useState([])
   useEffect(() => {
-    fetch(`http://localhost:4000/blog/${id}`)
+    fetch(`https://inventory-update-server.vercel.app/blog/${id}`)
       .then(res => res.json())
       .then(data => {
         setBlogsDetails(data)
