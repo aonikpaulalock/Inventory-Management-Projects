@@ -7,7 +7,7 @@ import auth from '../../../Firebase.init';
 import SocialLogin from './SocialLogin';
 import "../../Styles/Login/LoginSignup.css"
 import image from "../../Asset/Login/login.png"
-import Loading from '../../Shared/Loading';
+import CycleLoading from '../../../components/Loading/CycleLoading';
 const Signup = () => {
   // Hooks
   const navigate = useNavigate()
@@ -24,7 +24,6 @@ const Signup = () => {
     const email = event.target.email.value;
     const password = event.target.password.value
     const confirmPassword = event.target.confirmPassword.value
-    console.log(email, password);
 
     if (password !== confirmPassword) {
       setError("Don't match password")
@@ -42,7 +41,7 @@ const Signup = () => {
   }
 
   if (loading || updating) {
-    return <Loading />
+    return <CycleLoading/>
   }
 
   if (user) {

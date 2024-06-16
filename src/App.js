@@ -16,8 +16,22 @@ import ProtectedRoute from './Pages/Shared/ProtectedRoute'; import Blogs from '.
 import NotFound from './Pages/Shared/NotFound';
 import MyItems from './Pages/BeUser/MyItems';
 import BlogDetails from './Pages/Home/BlogDetails';
+import { useEffect, useState } from 'react';
+import CycleLoading from './components/Loading/CycleLoading';
 ;
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <CycleLoading />;
+  }
   return (
     <>
       <Header />

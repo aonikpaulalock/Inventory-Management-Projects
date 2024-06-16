@@ -7,7 +7,7 @@ import auth from '../../../Firebase.init';
 import SocialLogin from './SocialLogin';
 import "../../Styles/Login/LoginSignup.css"
 import image from "../../Asset/Login/login.png"
-import Loading from '../../Shared/Loading';
+import CycleLoading from '../../../components/Loading/CycleLoading';
 const Login = () => {
   // Hooks
   const navigate = useNavigate()
@@ -37,7 +37,7 @@ const Login = () => {
     event.target.reset()
   }
   if (loading) {
-    return <Loading />
+    return <CycleLoading />
   }
 
   if (user) {

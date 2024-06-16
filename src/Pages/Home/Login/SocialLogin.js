@@ -5,7 +5,7 @@ import auth from '../../../Firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import "../../Styles/Login/SocialLogin.css"
-import Loading from '../../Shared/Loading';
+import CycleLoading from '../../../components/Loading/CycleLoading';
 const SocialLogin = () => {
   const navigate = useNavigate()
   const location = useLocation()
@@ -15,7 +15,7 @@ const SocialLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
   if (loading) {
-    return <Loading /> ;
+    return <CycleLoading /> ;
   }
   if (error) {
     errorStore = <p className="text-danger">Error: {error?.message}</p>

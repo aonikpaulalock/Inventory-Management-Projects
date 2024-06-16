@@ -1,14 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../Styles/Home/Blogs.css"
+import CycleLoading from '../../components/Loading/CycleLoading';
 const Blogs = () => {
   const navigate = useNavigate()
-  const [blogs, setBlogs] = useState([])
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch("https://inventory-update-server.vercel.app/blogs")
       .then(res => res.json())
-      .then(data => setBlogs(data))
+      .then(data => {
+        setBlogs(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching blogs:', error);
+        setLoading(false)
+      });
   }, [])
+
+  if (loading) {
+    return <CycleLoading />
+  }
+
   return (
     <div className="container my-5">
       <div className="mb-5">
@@ -31,7 +45,7 @@ const Blogs = () => {
                 </div>
                 <p>{blog.description.slice(0, 400,).concat("...................")}
                   <div className="d-flex justify-content-center">
-                    <button className="manage-inventory" onClick={()=>navigate(`/blogs/${blog._id}`)}>
+                    <button className="manage-inventory" onClick={() => navigate(`/blogs/${blog._id}`)}>
                       Read More
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right ms-2 svg-icon me-2" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
