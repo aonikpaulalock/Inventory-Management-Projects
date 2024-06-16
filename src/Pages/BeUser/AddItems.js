@@ -6,7 +6,9 @@ import { toast } from 'react-toastify';
 import auth from '../../Firebase.init';
 import Add from "../Asset/Add-Items/Add.png"
 import "../Styles/BeUser/AddItems.css"
+import { useNavigate } from 'react-router-dom';
 const AddItems = () => {
+  const navigate = useNavigate()
   const [user] = useAuthState(auth);
   // Post Data
   const handleAddProduct = async (event) => {
@@ -25,6 +27,7 @@ const AddItems = () => {
       .then(response => {
         toast.success("Your Product Aded Successfully")
         event.target.reset()
+        navigate("/myItems")
       })
   }
   return (

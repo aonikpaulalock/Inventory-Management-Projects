@@ -31,14 +31,17 @@
   letter-spacing: .1rem;
 }
 .manage-inventory {
-  background-color: transparent;
+  background-color: var(--text-primary-color);
   border: 0;
   font-family: "Inter";
   font-weight: 700;
   font-size: 1.7rem;
   line-height: 2.5rem;
-  color: var(--other-primary-color);
+  color: white;
   letter-spacing: .1rem;
+  padding: 0 3rem;
+  border-radius: .6rem;
+  margin: 1rem 0;
  
 }
 .manage-inventory:hover .svg-icon {

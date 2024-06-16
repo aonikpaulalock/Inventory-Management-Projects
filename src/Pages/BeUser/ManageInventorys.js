@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Table } from 'react-bootstrap';
 import useInventory from '../Asset/Hooks/useInventory';
 import "../Styles/BeUser/ManageInvertories.css"
@@ -6,7 +6,7 @@ import ManageInventory from './ManageInventory';
 import axios from "axios";
 import Swal from 'sweetalert2';
 const ManageInventorys = () => {
-  const [inventorys, setInventorys] = useInventory();
+  const [inventorys, ,setInventorys] = useInventory();
 
   const handleDelete = async (id) => {
     Swal.fire({
@@ -24,6 +24,7 @@ const ManageInventorys = () => {
           .delete(url)
           .then(response => {
             const filterDelete = inventorys.filter(product => product._id !== id)
+            console.log(filterDelete)
             setInventorys(filterDelete)
           })
         Swal.fire(
