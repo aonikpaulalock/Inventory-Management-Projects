@@ -40,12 +40,14 @@
 }
 
 .input-field {
+  font-size: 14px;
   width: 320px;
   padding: 20px 20px 20px 40px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
-  color: #333;
+  color:  rgba(0, 0, 0, 0.5);
+  font-weight: 700;
 }
 
 .input-field::placeholder {

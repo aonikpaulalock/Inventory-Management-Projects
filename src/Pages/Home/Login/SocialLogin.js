@@ -24,17 +24,17 @@ const SocialLogin = () => {
     navigate(from, { replace: true })
   }
   return (
-    <div>
-      <button className="Provider" onClick={() => signInWithGoogle()}>
-        <div className='d-flex align-items-center justify-content-center'>
+    <div className='d-flex my-2'>
+      <button className="Provider me-3" onClick={() => signInWithGoogle()}>
+        <div>
           <img src={Google} alt="" width={25} height={25} />
-          <span className="ms-4">Sign up with Google</span>
+          <span className="ms-4">Google</span>
         </div>
       </button>
-      <button className="Provider mt-3">
-        <div className='d-flex align-items-center justify-content-center'>
+      <button className="Provider">
+        <div className=''>
           <img src={Facebook} alt="" width={25} height={25} />
-          <span className="ms-4">Sign up with Facebook</span>
+          <span className="ms-4">Facebook</span>
         </div>
       </button>
       {errorStore}
